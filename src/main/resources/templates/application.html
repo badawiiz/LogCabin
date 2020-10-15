@@ -7,10 +7,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1>Welcome to LogCabin</h1>
+<h1>Here's your requested app information</h1>
 <br/>
-<a href="home?application=facebook">Facebook</a>
-<a href="home?application=instagram">Instagram</a>
-<a href="home?application=twitter">twitter</a>
+<p th:text = "${applicationDTO}"/>
 </body>
 </html>

@@ -30,5 +30,11 @@ public class ApplicationDTO {
 	public void setNotes(String notes) {
 		this.notes = notes;
 	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return appName + " " + username + " " + password + " "  + notes;
+	}
 
 }
