@@ -49,4 +49,10 @@ public class LogcabinController {
 		return "home";
 
 	}
+	
+	@RequestMapping("/")
+	public String Index(){
+		
+		return "home";
+	}
 }
