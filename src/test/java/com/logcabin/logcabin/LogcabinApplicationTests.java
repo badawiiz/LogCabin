@@ -7,7 +7,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 class LogcabinApplicationTests {
 
 	@Test
-	void contextLoads() {
+	public void contextLoads() throws Exception {
+		assertThat(controller).isNotNull();
 	}
 	
 	public class TestClasses {
