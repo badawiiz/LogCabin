@@ -31,6 +31,9 @@ public class ApplicationDTO {
 		this.notes = notes;
 	}
 	
+	TextField password = new TextField(8);
+	password.setEchoChar('*');
+	
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
