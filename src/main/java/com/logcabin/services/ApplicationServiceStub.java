@@ -1,10 +1,7 @@
 package com.logcabin.services;
 
 import org.springframework.stereotype.Component;
-
 import com.logcabin.dto.ApplicationDTO;
-
-
 
 @Component
 public class ApplicationServiceStub implements IApplicationService {
@@ -23,9 +20,7 @@ public class ApplicationServiceStub implements IApplicationService {
 	}
 
 	@Override
-	public void save(ApplicationDTO applicationDTO) {
-		
-		
+	public void save(ApplicationDTO applicationDTO) {		
 	}
 	
 }
