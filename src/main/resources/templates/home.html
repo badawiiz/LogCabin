@@ -31,20 +31,23 @@
 	<div class="container">
 	
 		<h1>Welcome to LogCabin</h1>
+		<hr>
 		
-		<!-- Create a Button to add New faculty -->
-		<a th:href="@{/websites/webAddForm}" class="btn btn-dark btn-sm mb-2">Add New Faculty Here</a>
+		<!-- Create a Button to add New Password -->
+		<a th:href="@{/websites/webAddForm}" class="btn btn-dark btn-sm mb-2">Add New Password</a>
 		
 		<br /> 
 		<a href="home?application=facebook">Facebook</a> 
-		<i class="fab fa-facebook-square" aria-hidden="true"></i> 
+		<i th:href="@{/websites/webAddForm}" class="fab fa-facebook-square  fa-5x" aria-hidden="true"></i> 
+		
+		<br /> 
 		<a href="home?application=instagram">Instagram</a> 
-		<i class="fab fa-instagram" aria-hidden="true"></i> 
+		<i th:href="@{/websites/webAddForm}" class="fab fa-instagram  fa-5x" aria-hidden="true"></i>
+		
+		<br />  
 		<a href="home?application=twitter">Twitter</a> 
-		<i class="fab fa-twitter-square"></i>
-		<div class="center">
-			<i class="fas fa-plus-square"></i>
-		</div>
+		<i th:href="@{/websites/webAddForm}" class="fab fa-twitter-square  fa-5x"></i>
+
 	</div>
 </body>
 </html>
