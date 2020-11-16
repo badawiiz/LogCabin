@@ -16,7 +16,7 @@ public class LogcabinController {
 	@Autowired
 	private IApplicationService applicationServiceStub;
 	
-	@RequestMapping(value="/home", params= {"application=facebook"})
+	@RequestMapping(value="websites/home", params= {"application=facebook"})
 	public String facebook(Model model){
 		
 		ApplicationDTO applicationDTO = applicationServiceStub.fetchByName("Facebook");
@@ -25,7 +25,7 @@ public class LogcabinController {
 
 	}
 	
-	@RequestMapping(value="/home", params= {"application=instagram"})
+	@RequestMapping(value="websites/home", params= {"application=instagram"})
 	public String instagram(Model model){
 		
 		ApplicationDTO applicationDTO = applicationServiceStub.fetchByName("Instagram");
@@ -34,7 +34,7 @@ public class LogcabinController {
 
 	}
 	
-	@RequestMapping(value="/home", params= {"application=twitter"})
+	@RequestMapping(value="websites/home", params= {"application=twitter"})
 	public String twitter(Model model){
 		
 		ApplicationDTO applicationDTO = applicationServiceStub.fetchByName("Twitter");

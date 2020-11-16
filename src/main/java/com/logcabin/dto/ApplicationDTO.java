@@ -1,16 +1,49 @@
 package com.logcabin.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "application")
 public class ApplicationDTO {
 	
-	private String appName;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
+	@Column(name = "applicationId")
+	private String applicationId;
+	
+	@Column(name = "username")
 	private String username;
+	
+	@Column(name = "password")
 	private String password;
+	
+	@Column(name = "notes")
 	private String notes;
-	public String getAppName() {
-		return appName;
+	
+	
+public ApplicationDTO() {
+		
 	}
-	public void setAppName(String appName) {
-		this.appName = appName;
+
+	public ApplicationDTO(String applicationId, String username, String password, String notes) {
+		this.applicationId = applicationId;
+		this.username = username;
+		this.password = password;
+		this.notes = notes;
+	}
+	
+	
+	public String getApplicationId() {
+		return applicationId;
+	}
+	public void setApplicationId(String appName) {
+		this.applicationId = appName;
 	}
 	public String getUsername() {
 		return username;
@@ -34,7 +67,7 @@ public class ApplicationDTO {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return appName + " " + username + " " + password + " "  + notes;
+		return applicationId + " " + username + " " + password + " "  + notes;
 	}
 
 }

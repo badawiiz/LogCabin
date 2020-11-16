@@ -14,7 +14,7 @@ public class ApplicationServiceStub implements IApplicationService {
 	public ApplicationDTO fetchByName (String name) 
 	{
 		ApplicationDTO applicationDTO = new ApplicationDTO();
-		applicationDTO.setAppName(name);
+		applicationDTO.setApplicationId(name);
 		applicationDTO.setUsername("user@" + name + ".com");
 		applicationDTO.setPassword(name + "123");
 		applicationDTO.setNotes("Change password for " + name);
