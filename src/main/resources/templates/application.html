@@ -3,14 +3,57 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>LogCabin.com</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<style>
+.center {
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	padding: 10px;
+}
+</style>
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+	integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+	crossorigin="anonymous">
+	
+<script src="https://kit.fontawesome.com/96aff2c2eb.js"
+	crossorigin="anonymous"></script>
+	
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </head>
-<body>
-<h1>Here's your requested app information</h1>
-<br/>
-<p th:text = "${applicationDTO}"/>
-<!-- Create a Button to save new log information -->
-		<a th:href="@{/websites/home}" class="btn btn-dark btn-sm mb-2">Save New log information</a>
+
+<body onload="getWebsiteIcon()">
+	<script src="Scripts/jquery-2.1.0.min.js"></script>
+	
+	<script>
+		function getWebsiteIcon() {
+			const p = document.getElementById('appId');
+			var app = p.textContent;
+			var appFin = 'fab fa-' + app + '-square  fa-5x';
+			console.log(appFin.toLowerCase());
+			p.setAttribute("class", "");
+			p.setAttribute("class", appFin.toLowerCase());
+		}
+	</script>
+	
+	<div class="container">
+	
+	<h1>Here's your requested app information</h1>
+	<br />
+
+	<i id="websiteIcon" aria-hidden="true"></i>
+
+	<p id="appId" th:text="${applicationDTO.applicationId}" />
+	<p th:text="${applicationDTO}" />
+	<!-- Create a Button to save new log information -->
+	<a th:href="@{/websites/home}" class="btn btn-dark btn-sm mb-2">Save
+		New log information</a>
+		
+	</div>
+	
 </body>
 </html>
