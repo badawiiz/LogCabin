@@ -47,6 +47,27 @@
 
 	<i id="websiteIcon" aria-hidden="true"></i>
 
+	<!--<form action="#" th:action="@{/save}" th:object="${applicationDTO}" method="POST">-->
+
+	<!-- Invisible Form as needed to Update Info -->
+	<!--<input type="hidden" th:field="*{id}"/>
+
+	<input type="text" th:field="*{applicationId}"
+	class="form-control mb-4 col-4" placeholder="Website">
+
+	<input type="text" th:field="*{username}"
+	class="form-control mb-4 col-4" placeholder="Usernamee">
+
+	<input type="text" th:field="*{password}"
+	class="form-control mb-4 col-4" placeholder="Password">
+
+	<input type="text" th:field="*{notes}"
+	class="form-control mb-4 col-4" placeholder="Notes">
+
+	<button type="submit" class="btn btn-danger col-2">Register</button>
+
+	</form>-->
+
 	<p id="appId" th:text="${applicationDTO.applicationId}" />
 	<p th:text="${applicationDTO}" />
 	<!-- Create a Button to save new log information -->
