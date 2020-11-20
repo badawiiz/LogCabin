@@ -58,14 +58,14 @@ public class LogcabinController {
 		return "home";
 	}
 	
-	/*@PostMapping("/save")
-	public String saveFaculty(@ModelAttribute("faculty") ApplicationDTO appDTO) {
+	@PostMapping("/save")
+	public String saveApplication(@ModelAttribute("application") ApplicationDTO appDTO) {
 	
 		//Register the Faculty
-		facultyService.save(appDTO);
+		//ApplicationService.save(appDTO);
 		
 		//Block duplicate submission for accidental page refreshed
 		return "redirect:/home";
 	
-	}*/
+	}
 }

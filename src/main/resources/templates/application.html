@@ -25,6 +25,8 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </head>
+<body>
+
 
 <body onload="getWebsiteIcon()">
 	<script src="Scripts/jquery-2.1.0.min.js"></script>
@@ -42,17 +44,17 @@
 	
 	<div class="container">
 	
-	<h1>Here's your requested app information</h1>
 	<br />
 
+	<p id="appId" th:text="${applicationDTO.applicationId}" />
+	
 	<i id="websiteIcon" aria-hidden="true"></i>
 
-	<!--<form action="#" th:action="@{/save}" th:object="${applicationDTO}" method="POST">-->
+	<form action="#" th:action="@{/save}" th:object="${applicationDTO}" method="POST">
 
 	<!-- Invisible Form as needed to Update Info -->
-	<!--<input type="hidden" th:field="*{id}"/>
 
-	<input type="text" th:field="*{applicationId}"
+	<input type="hidden" th:field="*{applicationId}"
 	class="form-control mb-4 col-4" placeholder="Website">
 
 	<input type="text" th:field="*{username}"
@@ -64,12 +66,8 @@
 	<input type="text" th:field="*{notes}"
 	class="form-control mb-4 col-4" placeholder="Notes">
 
-	<button type="submit" class="btn btn-danger col-2">Register</button>
+	</form>
 
-	</form>-->
-
-	<p id="appId" th:text="${applicationDTO.applicationId}" />
-	<p th:text="${applicationDTO}" />
 	<!-- Create a Button to save new log information -->
 	<a th:href="@{/websites/home}" class="btn btn-dark btn-sm mb-2">Save
 		New log information</a>
