@@ -66,7 +66,6 @@ public ApplicationDTO() {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return applicationId + " " + username + " " + password + " "  + notes;
 	}
 
