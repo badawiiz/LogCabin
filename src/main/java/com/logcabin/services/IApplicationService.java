@@ -1,11 +1,15 @@
 package com.logcabin.services;
 
+import java.util.List;
+
 import com.logcabin.dto.ApplicationDTO;
 
 public interface IApplicationService {
+	
+	public List<ApplicationDTO> findAll();
 
-	ApplicationDTO fetchByName(String name);
+	public ApplicationDTO fetchByName(String name);
 
-	void save(ApplicationDTO applicationDTO);
+	public void save(ApplicationDTO applicationDTO);
 
 }

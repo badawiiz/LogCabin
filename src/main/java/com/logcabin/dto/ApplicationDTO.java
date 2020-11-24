@@ -14,16 +14,16 @@ public class ApplicationDTO {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
-	@Column(name = "applicationId")
+	@Column(name = "application_id")
 	private String applicationId;
 	
-	@Column(name = "username")
+	@Column(name = "user_name")
 	private String username;
 	
-	@Column(name = "password")
+	@Column(name = "pass_word")
 	private String password;
 	
-	@Column(name = "notes")
+	@Column(name = "new_notes")
 	private String notes;
 	
 	

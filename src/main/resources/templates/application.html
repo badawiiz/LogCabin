@@ -55,23 +55,30 @@
 	<!-- Invisible Form as needed to Update Info -->
 
 	<input type="hidden" th:field="*{applicationId}"
-	class="form-control mb-4 col-4" placeholder="Website">
+	class="form-control mb-4 col-4" placeholder="Application">
 
-	<input type="text" th:field="*{username}"
-	class="form-control mb-4 col-4" placeholder="Usernamee">
+	Username:<input type="text" th:field="*{username}"
+	class="form-control mb-4 col-4" placeholder="Username">
 
-	<input type="text" th:field="*{password}"
+	Password:<input type="text" th:field="*{password}"
 	class="form-control mb-4 col-4" placeholder="Password">
 
-	<input type="text" th:field="*{notes}"
+	Notes:<input type="text" th:field="*{notes}"
 	class="form-control mb-4 col-4" placeholder="Notes">
+	
+	<!-- Create a Button to save new log information -->
+	<button type="submit" class="btn btn-dark btn-sm mb-2">Save
+		New log information</button>
 
 	</form>
+	
+	<br>
+	
+	<!-- Create a Button to return to home page -->
+	<a class="btn btn-dark" data-toggle="collapse" th:href="@{/home}" role="button" aria-expanded="false" aria-controls="collapseExample">
+   Return to the Home Page
+    </a>
 
-	<!-- Create a Button to save new log information -->
-	<a th:href="@{/websites/home}" class="btn btn-dark btn-sm mb-2">Save
-		New log information</a>
-		
 	</div>
 	
 </body>
